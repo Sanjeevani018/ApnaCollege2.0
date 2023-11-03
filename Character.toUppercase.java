@@ -1,18 +1,18 @@
 public class Strings{
     public static String toUpperCase(String str){
         StringBuilder sb= new StringBuilder("");
-
+//0th position letter always keep it capital
         char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
-
+        
         for(int i=1;i<str.length();i++){
-            if(str.charAt(i)==' ' && i<str.length()-1 ){
+            if(str.charAt(i)==' ' && i<str.length()-1 ){     //1st letter after empty space capital and after space there should be letter condn
                 sb.append(str.charAt(i));
                 i++;
                 sb.append(Character.toUpperCase(str.charAt(i)));
             }
             else{
-                sb.append(str.charAt(i));
+                sb.append(str.charAt(i));                 //add other letters
             }
         }return sb.toString();
 
